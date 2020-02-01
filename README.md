@@ -26,9 +26,12 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
-/////////////////////////////////////////////////////////////////
 
-Initial Commit Angular playground
+//////////////////////////////////////
+
+[(https://www.freecodecamp.org/news/angular-8-tutorial-in-easy-steps/)]
 
 
-# angular-8.3.23-playground
+## Fake Rest API server using Faker - https://github.com/Marak/faker.js
+
+Run `npm run server`
