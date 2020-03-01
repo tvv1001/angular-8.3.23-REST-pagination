@@ -1,0 +1,22 @@
+<div class="products">
+  <div *ngIf="products.length === 0"></div>
+
+  <div class="item" *ngFor="let product of products">
+    <div class="item-wrap">
+      <div class="name">
+        <h3>{{ product.name }}</h3>
+      </div>
+      <div class="details">
+        <div class="price">${{ product.price }}</div>
+        <div><strong>Items remaining:</strong> {{ product.quantity }}</div>
+        <p>
+          {{ product.description }}
+        </p>
+        <button>Buy product</button>
+      </div>
+      <div class="img">
+        <img src="{{ product.imageUrl }}" />
+      </div>
+    </div>
+  </div>
+</div>

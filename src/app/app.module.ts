@@ -3,7 +3,7 @@ import { NgModule } from "@angular/core";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { HttpClientModule } from "@angular/common/http";
-import { ProductComponent } from "./home/home.component";
+import { ProductComponent } from "./products/products.component";
 import { OneComponent } from "./one/one.component";
 import { AboutComponent } from "./about/about.component";
 

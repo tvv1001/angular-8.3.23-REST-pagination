@@ -2,9 +2,9 @@ import { Component, OnInit } from "@angular/core";
 import { ApiService } from "../api.service";
 
 @Component({
-  selector: "app-home",
-  templateUrl: "./home.component.html",
-  styleUrls: ["./home.component.scss"]
+  selector: "app-products",
+  templateUrl: "./products.component.html",
+  styleUrls: ["./products.component.scss"]
 })
 export class ProductComponent implements OnInit {
   products = [];

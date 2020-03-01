@@ -17,6 +17,8 @@ h1,
 h2,
 h3,
 h4,
+h5,
+h6,
 p,
 ul[class],
 ol[class],
@@ -31,10 +33,11 @@ dd {
 
 /* Set core body defaults */
 body {
-  min-height: 100vh;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 100%;
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */
@@ -77,8 +80,120 @@ select {
   }
 }
 
+.app-pg {
+  /* site definitions tags */
+  a:link,
+  a:visited {
+    color: #3352df;
+  }
+  a:focus,
+  a:hover,
+  a:active {
+    color: #fff;
+    text-decoration: none;
+    background: #3352df;
+  }
 
-.app-namespace ul, .app-namespace li {margin:0;padding:0;list-style-type: none;}
-.app-namespace li {float:left; margin:0 1rem 0 0;}
-.app-namespace a {margin:.4rem 0;display:inline-block;}
-.app-namespace .dyno-content {clear:both;}
+  h1 {
+    font-size: 3.5rem;
+  }
+  h2 {
+    font-size: 2.7rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  h4 {
+    font-size: 1.5rem;
+  }
+  h5 {
+    font-size: 1.35rem;
+  }
+  h6 {
+    font-size: 1.2rem;
+  }
+
+  button {
+    padding: 0.3rem 1rem;
+    background: #333;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 20px;
+    text-decoration: none;
+    font-family: helvetica, arial, sans-serif;
+    font-weight: 400;
+    border: 1px solid #333;
+    cursor: pointer;
+  }
+
+  button:focus,
+  button:hover {
+    background: #fff;
+    color: #333;
+  }
+
+  /* site defintions classes */
+  .content-wrap {
+    padding: 0 1rem;
+  }
+
+  /* landmarked areas */
+  header {
+    .co {
+      font-size: 2rem;
+      font-weight: 400;
+      margin: 1rem;
+    }
+    nav {
+      background: #2796aa;
+      ul {
+        list-style-type: none;
+        display: table;
+        padding: 0;
+        li {
+          display: table-cell;
+          a {
+            padding: 1rem 2rem;
+            font-weight: bold;
+            text-decoration: none;
+            display: block;
+          }
+          a.active {
+            background: #2a7a88;
+          }
+          a:link,
+          a:visited {
+            color: #fff;
+            transition: background 0.5s;
+          }
+          // a:link:after,
+          // a:visited:after {
+          //   content: "\02C5";
+          //   position: relative;
+          //   right: 0;
+          //   top: 0;
+          //   transition: top 0.5s;
+          //   margin: 0 0 0 0.4rem;
+          // }
+          a:focus,
+          a:hover,
+          a:active {
+            text-decoration: none;
+            background: #2a7a88;
+            transition: background 0.2s;
+          }
+          // a:active:after {
+          //   top: 0.2rem;
+          //   transition: top 0.5s;
+          // }
+        }
+      }
+    }
+  }
+  footer {
+    background: #000;
+    color: #fff;
+    padding: 1rem;
+    margin: 1rem 0 0 0;
+  }
+}

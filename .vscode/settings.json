@@ -1,4 +1,22 @@
+// Place your settings in this file to overwrite default and user settings.
 {
-  //"editor.formatOnSave": true,
-  "editor.fontSize": 13
+  "workbench.colorCustomizations": {
+    // "activityBar.background": "#ab307e",
+    // "activityBar.foreground": "#e7e7e7",
+    // "activityBar.inactiveForeground": "#e7e7e799",
+    // "activityBarBadge.background": "#25320e",
+    // "activityBarBadge.foreground": "#e7e7e7",
+    "titleBar.activeBackground": "#A34E4B",
+    "titleBar.inactiveBackground": "#4D1918",
+    "titleBar.activeForeground": "#e7e7e7",
+    "titleBar.inactiveForeground": "#e7e7e799",
+    "statusBar.background": "#36484D",
+    // "statusBarItem.hoverBackground": "#ab307e",
+    "statusBar.foreground": "#e7e7e7",
+    "panel.border": "#7DA7B3",
+    "sideBar.border": "#7DA7B3",
+    "activityBar.border": "#7DA7B3",
+    "editorGroup.border": "#7DA7B3",
+    "tab.activeBorder": "#7DA7B3"
+  }
 }
