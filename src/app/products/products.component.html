@@ -1,6 +1,5 @@
 <div class="products">
   <div *ngIf="products.length === 0"></div>
-
   <div class="item" *ngFor="let product of products">
     <div class="item-wrap">
       <div class="name">
@@ -19,4 +18,10 @@
       </div>
     </div>
   </div>
+</div>
+<div>
+  <button (click)="firstPage()">First</button>
+  <button (click)="previousPage()">Previous</button>
+  <button (click)="nextPage()">Next</button>
+  <button (click)="lastPage()">Last</button>
 </div>
