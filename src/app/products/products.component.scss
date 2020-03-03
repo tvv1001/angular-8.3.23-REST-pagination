@@ -1,4 +1,10 @@
+.hero {
+  background: #add0d6;
+}
 .products {
+  padding: 0 1rem;
+  max-width: 100rem;
+  margin: auto;
   .item-wrap {
     display: grid;
     grid-template-columns: [details] 50% [img] 50%;
@@ -8,15 +14,12 @@
 
     .name {
       grid-area: prod-name;
-      padding: 0 1rem;
     }
     .details {
       grid-area: prod-details;
-      padding: 0 1rem;
     }
     .img {
       grid-area: prod-img;
-      padding: 0 1rem;
     }
   }
   .price {

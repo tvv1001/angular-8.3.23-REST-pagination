@@ -80,7 +80,56 @@ select {
   }
 }
 
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;
+
+// Small devices
+@mixin sm {
+  @media (min-width: $screen-sm-min) {
+    @content;
+  }
+}
+
+// Medium devices
+@mixin md {
+  @media (min-width: $screen-md-min) {
+    @content;
+  }
+}
+
+// Large devices
+@mixin lg {
+  @media (min-width: $screen-lg-min) {
+    @content;
+  }
+}
+
+// Extra large devices
+@mixin xl {
+  @media (min-width: $screen-xl-min) {
+    @content;
+  }
+}
+
 .app-pg {
+  /* Device ID */
+  &:before {
+    content: "Mobile";
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0.5rem;
+  }
+
   /* site definitions tags */
   a:link,
   a:visited {
@@ -95,22 +144,22 @@ select {
   }
 
   h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
   h2 {
-    font-size: 2.7rem;
+    font-size: 2.2rem;
   }
   h3 {
-    font-size: 2rem;
+    font-size: 1.65rem;
   }
   h4 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
   h5 {
-    font-size: 1.35rem;
+    font-size: 1.1rem;
   }
   h6 {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   button {
@@ -124,6 +173,7 @@ select {
     font-weight: 400;
     border: 1px solid #333;
     cursor: pointer;
+    margin-right: 1rem;
   }
 
   button:focus,
@@ -133,8 +183,10 @@ select {
   }
 
   /* site defintions classes */
-  .content-wrap {
+  .content {
     padding: 0 1rem;
+    margin: auto;
+    max-width: 100rem;
   }
 
   /* landmarked areas */
@@ -142,7 +194,7 @@ select {
     .co {
       font-size: 2rem;
       font-weight: 400;
-      margin: 1rem;
+      margin: 1rem 0;
     }
     nav {
       background: #2796aa;
@@ -150,6 +202,7 @@ select {
         list-style-type: none;
         display: table;
         padding: 0;
+        margin: 0;
         li {
           display: table-cell;
           a {
@@ -195,5 +248,54 @@ select {
     color: #fff;
     padding: 1rem;
     margin: 1rem 0 0 0;
+  }
+
+  @include sm {
+    /* Device ID */
+    &:before {
+      content: "Mobile Landscape";
+    }
+  }
+  @include md {
+    /* Device ID */
+    &:before {
+      content: "Tablet";
+    }
+    h1 {
+      font-size: 3.5rem;
+    }
+    h2 {
+      font-size: 2.7rem;
+    }
+    h3 {
+      font-size: 2rem;
+    }
+    h4 {
+      font-size: 1.5rem;
+    }
+    h5 {
+      font-size: 1.35rem;
+    }
+    h6 {
+      font-size: 1.2rem;
+    }
+  }
+  @include lg {
+    /* Device ID */
+    &:before {
+      content: "Desktop";
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(2, 50% [col]);
+      grid-column-gap: 2rem;
+      grid-row-gap: 2rem;
+    }
+  }
+  @include xl {
+    /* Device ID */
+    &:before {
+      content: "Desktop LG";
+    }
   }
 }

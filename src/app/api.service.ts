@@ -14,10 +14,10 @@ import { retry, catchError, tap } from "rxjs/operators";
 export class ApiService {
   private SERVER_URL = "http://localhost:3000/products";
 
-  public first: string = "";
-  public prev: string = "";
-  public next: string = "";
-  public last: string = "";
+  public first: string;
+  public prev: string;
+  public next: string;
+  public last: string;
 
   constructor(private httpClient: HttpClient) {}
 
@@ -51,10 +51,15 @@ export class ApiService {
       links[name] = url;
     });
 
-    this.first = links["first"];
-    this.last = links["last"];
-    this.prev = links["prev"];
-    this.next = links["next"];
+    const firstlink = "first";
+    const lastlink = "last";
+    const prevlink = "prev";
+    const nextlink = "next";
+
+    this.first = links[firstlink];
+    this.last = links[lastlink];
+    this.prev = links[prevlink];
+    this.next = links[nextlink];
   }
 
   public sendGetRequest() {
