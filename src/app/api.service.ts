@@ -12,7 +12,7 @@ import { retry, catchError, tap } from "rxjs/operators";
   providedIn: "root"
 })
 export class ApiService {
-  private SERVER_URL = "http://localhost:3000/products";
+  private SERVER_URL = "http://localhost:4300/products";
 
   public first: string;
   public prev: string;

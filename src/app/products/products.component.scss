@@ -1,16 +1,28 @@
+@import "../variables";
 .hero {
   background: #add0d6;
+  min-height: 20rem;
+
+  // background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="375" height="138" viewBox="0 0 375 138" fill="none"><path d="M0 56.0002C0 56.0002 90.5 86.5 183.5 34.5C276.5 -17.5 375 5.00006 375 5.00006V138H0V56.0002Z" fill="black" /></svg>');
+  // background-size: contain;
+  // background-repeat: no-repeat;
+  // background-position: center bottom;
 }
+
 .products {
-  padding: 0 1rem;
+  padding: 0 2rem;
   max-width: 100rem;
-  margin: auto;
+  margin: 2rem auto;
+
   .item-wrap {
     display: grid;
-    grid-template-columns: [details] 50% [img] 50%;
+    grid-gap: 0.6rem;
+    //grid-template-columns: [details] 50% [img] 50%;
+    grid-template-columns: repeat(2, minmax(min(10rem, 100%), 1fr));
     grid-template-areas:
       "prod-name prod-name"
-      "prod-details prod-img";
+      "prod-img prod-img"
+      "prod-details prod-details";
 
     .name {
       grid-area: prod-name;
@@ -20,6 +32,7 @@
     }
     .img {
       grid-area: prod-img;
+      margin: 0 0 1rem 0;
     }
   }
   .price {
@@ -32,4 +45,47 @@
   button {
     margin: 1rem 0;
   }
+  @include sm {
+    .item-wrap {
+      grid-template-areas:
+        "prod-name prod-name"
+        "prod-details prod-img";
+    }
+  }
+  @include md {
+    .item-wrap {
+      grid-template-areas:
+        "prod-name prod-name"
+        "prod-img prod-img"
+        "prod-details prod-details";
+    }
+  }
+  @include lg {
+  }
+  @include xl {
+    .item-wrap {
+      grid-template-areas:
+        "prod-name prod-name"
+        "prod-details prod-img";
+    }
+  }
+  @include xxl {
+  }
+}
+
+@include sm {
+}
+@include md {
+  .products {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(min(10rem, 100%), 1fr));
+    //grid-template-columns: repeat(2, 50% [col]);
+    grid-gap: 2rem;
+  }
+}
+@include lg {
+}
+@include xl {
+}
+@include xxl {
 }
