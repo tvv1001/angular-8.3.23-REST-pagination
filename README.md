@@ -31,7 +31,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 [(https://www.freecodecamp.org/news/angular-8-tutorial-in-easy-steps/)]
 
-- this repo addresses a minor issue with the pagination script
+- this repo addresses a minor issue with the pagination script from the above tutorial.
 - no material design, basic scss/html
 
 
