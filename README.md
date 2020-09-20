@@ -1,4 +1,4 @@
-# AngularPg
+# Angular with REST catalog & pagination
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.23.
 
@@ -30,6 +30,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 //////////////////////////////////////
 
 [(https://www.freecodecamp.org/news/angular-8-tutorial-in-easy-steps/)]
+
+- this repo addresses a minor issue with the pagination script
+- no material design, basic scss/html
 
 
 ## Fake Rest API server using Faker - https://github.com/Marak/faker.js
